@@ -1,0 +1,42 @@
+<!-- Begin: Left Column -->
+<div id="left"><div id="leftcol">
+	<h2>[% about1.data.title %]</h2>
+				
+	[% about1.body.0.body %]
+
+</div></div>
+<!-- End: Left Column -->
+
+<!-- Begin: Right Column -->
+<div id="right"><div id="rightcol">
+
+[% FOREACH article = about2.body %]
+<p>
+[% IF article %]
+	[% IF article.type == 1 %]
+		[% IF article.link %]
+		[% IF article.href %]
+			<a href='[% article.href %]'><img class="inline" src="[% webpath %]/[% article.link %]" alt="[% article.body %]" width="345" /></a>
+		[% ELSE %]
+			<img class="inline" src="[% webpath %]/[% article.link %]" alt="[% article.body %]" width="345" />
+		[% END %]
+		[% IF article.body %]<br />[% article.body %][% END %]
+		[% END %]
+	[% END %]
+
+	[% IF article.type == 2 %]
+			[% article.body %]
+	[% END %]
+
+	[% IF article.type == 3 %]
+			<a href='[% article.href %]'>[% article.href %]</a>
+	[% END %]
+[% END %]
+[% END %]
+				<!--
+				<img src="[% webpath %]/photos/about/mescooteriow-web.jpg" width="240" height="193" border="0" /><br />
+				<img src="[% webpath %]/images/layout/mod2.jpg" height="100" border="0" />
+				-->
+
+</div></div>
+<!-- End: Right Column -->
