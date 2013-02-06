@@ -4,7 +4,7 @@ WriteMakefile(
     NAME            => 'Labyrinth::Demo',
     VERSION_FROM    => 'lib/Labyrinth/Demo.pm',
     PREREQ_PM       => {
-        'Labyrinth'                 => '5.02',
+        'Labyrinth'                 => '5.03',
         'Labyrinth::Plugin::Core'   => '5.04',
     },
     NO_META     => 1,
