@@ -53,7 +53,11 @@ CREATE TABLE `acls` (
   `groupid` int(10) unsigned DEFAULT '0',
   `userid` int(10) unsigned DEFAULT '0',
   `accessid` int(4) DEFAULT NULL,
-  PRIMARY KEY (`aclid`)
+  PRIMARY KEY (`aclid`),
+  INDEX FLDIX (`folderid`),
+  INDEX GRPIX (`groupid`),
+  INDEX USRIX (`userid`),
+  INDEX ACSIX (`accessid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -85,7 +89,12 @@ CREATE TABLE `articles` (
   `front` int(1) DEFAULT '0',
   `latest` int(1) DEFAULT '0',
   `publish` int(4) DEFAULT NULL,
-  PRIMARY KEY (`articleid`)
+  PRIMARY KEY (`articleid`),
+  INDEX FLDIX (`folderid`),
+  INDEX USRIX (`userid`),
+  INDEX SECIX (`sectionid`),
+  INDEX NAMIX (`quickname`),
+  INDEX PUBIX (`publish`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -158,7 +167,10 @@ CREATE TABLE `hits` (
   `photoid` int(11) NOT NULL DEFAULT '0',
   `counter` int(11) DEFAULT NULL,
   `query` varchar(255) DEFAULT '',
-  `createdate` int(11) DEFAULT '0'
+  `createdate` int(11) DEFAULT '0',
+  INDEX PAGIX (`pageid`),
+  INDEX PHTIX (`photoid`),
+  INDEX AREIX (`area`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -181,7 +193,8 @@ CREATE TABLE `images` (
   `type` int(4) DEFAULT NULL,
   `href` varchar(255) DEFAULT NULL,
   `dimensions` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`imageid`)
+  PRIMARY KEY (`imageid`),
+  INDEX TYPIX (`type`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -289,7 +302,10 @@ CREATE TABLE `ixusergroup` (
   `type` int(1) unsigned NOT NULL DEFAULT '0',
   `linkid` int(10) unsigned NOT NULL DEFAULT '0',
   `groupid` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`indexid`)
+  PRIMARY KEY (`indexid`),
+  INDEX TYPIX (`type`),
+  INDEX LNKIX (`linkid`),
+  INDEX GRPIX (`groupid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -314,7 +330,9 @@ CREATE TABLE `menus` (
   `title` varchar(255) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
   `parentid` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`menuid`)
+  PRIMARY KEY (`menuid`),
+  INDEX TYPIX (`typeid`),
+  INDEX RLMIX (`realmid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -357,7 +375,8 @@ CREATE TABLE `optimages` (
   `optionid` int(10) unsigned NOT NULL DEFAULT '0',
   `typeid` int(10) unsigned NOT NULL DEFAULT '1',
   `imageid` int(10) unsigned DEFAULT NULL,
-  PRIMARY KEY (`optionid`,`typeid`)
+  PRIMARY KEY (`optionid`,`typeid`),
+  INDEX IMGIX (`imageid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -382,7 +401,9 @@ CREATE TABLE `options` (
   `text` varchar(255) DEFAULT NULL,
   `href` varchar(255) DEFAULT NULL,
   `section` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`optionid`)
+  PRIMARY KEY (`optionid`),
+  INDEX MENIX (`menuid`),
+  INDEX ACSIX (`accessid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -419,7 +440,9 @@ CREATE TABLE `paragraphs` (
   `href` varchar(255) DEFAULT NULL,
   `body` blob,
   `align` int(4) DEFAULT NULL,
-  PRIMARY KEY (`paraid`)
+  PRIMARY KEY (`paraid`),
+  INDEX ARTIX (`articleid`),
+  INDEX IMGIX (`imageid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -439,10 +462,11 @@ DROP TABLE IF EXISTS `realms`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `realms` (
   `realmid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `realm` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `command` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`realmid`)
+  `realm` varchar(32) NOT NULL,
+  `name` varchar(64) DEFAULT NULL,
+  `command` varchar(32) DEFAULT NULL,
+  PRIMARY KEY (`realmid`),
+  INDEX RLMIX (`realm`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -465,13 +489,15 @@ CREATE TABLE `sessions` (
   `labyrinth` varchar(255) DEFAULT NULL,
   `userid` int(10) unsigned NOT NULL DEFAULT '0',
   `name` varchar(255) DEFAULT NULL,
-  `realm` varchar(255) DEFAULT NULL,
+  `realm` varchar(32) DEFAULT NULL,
   `folderid` int(10) unsigned NOT NULL DEFAULT '0',
   `optionid` int(10) unsigned NOT NULL DEFAULT '0',
   `timeout` int(11) unsigned NOT NULL DEFAULT '0',
   `langcode` char(2) NOT NULL DEFAULT 'en',
   `query` blob,
-  PRIMARY KEY (`sessionid`)
+  PRIMARY KEY (`sessionid`),
+  INDEX LABIX (`labyrinth`),
+  INDEX USRIX (`userid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -493,7 +519,9 @@ CREATE TABLE `updates` (
   `pageid` int(11) DEFAULT NULL,
   `now` int(11) DEFAULT NULL,
   `pagets` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`upid`)
+  PRIMARY KEY (`upid`),
+  INDEX AREIX (`area`),
+  INDEX PAGIX (`pageid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -516,12 +544,15 @@ CREATE TABLE `users` (
   `nickname` varchar(255) DEFAULT NULL,
   `realname` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `realm` varchar(255) DEFAULT NULL,
+  `realm` varchar(32) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `url` varchar(255) DEFAULT NULL,
   `aboutme` blob,
   `search` int(1) NOT NULL DEFAULT '1',
-  PRIMARY KEY (`userid`)
+  PRIMARY KEY (`userid`),
+  INDEX ACSIX (`accessid`),
+  INDEX IMGIX (`imageid`),
+  INDEX RLMIX (`realm`)
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -531,7 +562,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` VALUES (1,1,1,'Guest','Guest','GUEST','public',SHA1('GUEST'),NULL,NULL,0);
 INSERT INTO `users` VALUES (2,5,1,'Master','Master','master@example.com','admin',SHA1('Master'),'','',0);
-INSERT INTO `users` VALUES (6,1,1,'','Test User','testuser@example.com','public',SHA1('testUser'),'http://labyrinth.missbarbell.co.uk','<p>test user</p>',1);
+INSERT INTO `users` VALUES (3,1,1,'','Test User','testuser@example.com','public',SHA1('testUser'),'http://labyrinth.missbarbell.co.uk','<p>test user</p>',1);
 
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

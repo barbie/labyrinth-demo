@@ -1,5 +1,7 @@
 Changes for the Labyrinth Demo Site
 
-1.00	01/01/2011
-	- official release alongside Labyrinth Core.
+	    - updates to phrasebook.ini
+        - added indexes to SQL.
 
+1.00	2011-01-01
+	    - official release alongside Labyrinth Core.
