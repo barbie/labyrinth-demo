@@ -15,8 +15,8 @@ use Labyrinth;
 
 #----------------------------------------------------------
 
-my $lubi = Labyrinth->new();
-$lubi->run('/var/www/demo/cgi-bin/config/settings.ini');
+my $lab = Labyrinth->new();
+$lab->run('/var/www/demo/cgi-bin/config/settings.ini');
 
 1;
 
