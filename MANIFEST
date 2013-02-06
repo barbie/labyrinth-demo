@@ -64,6 +64,8 @@ vhost/cgi-bin/templates/public/popup.html
 vhost/cgi-bin/templates/public/rssfeed.xml
 vhost/cgi-bin/templates/public/sidebar.html
 vhost/cgi-bin/templates/public/tinymce.html
+vhost/cgi-bin/templates/public/tinymce-table.html
+vhost/cgi-bin/templates/public/tinymce-wide.html
 vhost/cgi-bin/templates/users/user-acl.html
 vhost/cgi-bin/templates/users/user-adminedit.html
 vhost/cgi-bin/templates/users/user-adminlist.html

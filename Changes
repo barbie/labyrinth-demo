@@ -1,9 +1,10 @@
 Changes for the Labyrinth Demo Site
 
-	    - updates to phrasebook.ini
+        - updates to phrasebook.ini
         - added indexes to SQL.
         - change file dates changed to meet W3CDTF standards.
         - increased Labyrinth Core version dependency.
+        - updated and added tinymce 
 
-1.00	2011-01-01
-	    - official release alongside Labyrinth Core.
+1.00    2011-01-01
+        - official release alongside Labyrinth Core.
