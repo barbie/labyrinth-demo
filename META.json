@@ -34,7 +34,7 @@
         },
         "runtime" : {
             "requires" : {
-              "Labyrinth": "5.03",
+              "Labyrinth": "5.14",
               "Labyrinth::Plugin::Core": "5.04"
             }
         }

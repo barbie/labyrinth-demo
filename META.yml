@@ -10,7 +10,7 @@ distribution_type:          module
 installdirs:                site
 
 requires:
-  Labyrinth:	              5.03
+  Labyrinth:	              5.14
   Labyrinth::Plugin::Core:	5.04
 recommends:
   Test::More:               0.70
