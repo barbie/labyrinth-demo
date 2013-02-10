@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                       Labyrinth::Demo
-version:                    1.00
+version:                    1.01
 abstract:                   Labyrinth Website Management Framework - Demo Website
 author:
   - Barbie <barbie@cpan.org>
@@ -10,21 +10,22 @@ distribution_type:          module
 installdirs:                site
 
 requires:
+  perl:                     5.006
   Labyrinth:	              5.14
   Labyrinth::Plugin::Core:	5.04
 recommends:
-  Test::More:               0.70
+  Test::CPAN::Meta:         0
+  Test::CPAN::Meta::JSON:   0
   Test::Pod:                1.00
   Test::Pod::Coverage:      0.08
-  Test::CPAN::Meta:         0.13
-  Test::JSON::Meta:         0.08
 build_requires:
+  IO::File:                 0
   Test::More:               0.01
 
 provides:
   Labyrinth::Demo:
     file:     lib/Labyrinth/Demo.pm
-    version:  1.00
+    version:  1.01
 
 no_index:
   directory:

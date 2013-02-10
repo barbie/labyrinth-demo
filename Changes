@@ -1,5 +1,6 @@
 Changes for the Labyrinth Demo Site
 
+1.01    2013-02-10
         - updates to phrasebook.ini.
         - added indexes to SQL.
         - change file dates changed to meet W3CDTF standards.

@@ -1,6 +1,6 @@
 {
     "name": "Labyrinth::Demo",
-    "version": "1.00",
+    "version": "1.01",
     "abstract": "Labyrinth Website Management Framework - Demo Website",
     "author": [
         "Barbie (BARBIE) <barbie@cpan.org>"
@@ -23,17 +23,19 @@
     "prereqs" : {
         "test" : {
             "requires": {
+                "IO::File": "0",
                 "Test::More": "0.70"
             },
             "recommends": {
+                "Test::CPAN::Meta": "0",
+                "Test::CPAN::Meta::JSON": "0",
                 "Test::Pod": "1.00",
-                "Test::Pod::Coverage": "0.08",
-                "Test::CPAN::Meta": "0.13",
-                "Test::JSON::Meta": "0.08"
+                "Test::Pod::Coverage": "0.08"
             }
         },
         "runtime" : {
             "requires" : {
+              "perl": "5.006",
               "Labyrinth": "5.14",
               "Labyrinth::Plugin::Core": "5.04"
             }
@@ -43,7 +45,7 @@
     "provides": {
         "Labyrinth::Demo": {
             "file": "lib/Labyrinth/Demo.pm",
-            "version": "1.00"
+            "version": "1.01"
         }
     },
     "no_index": {
