@@ -1,5 +1,7 @@
 Changes
+INSTALL
 lib/Labyrinth/Demo.pm
+LICENSE
 Makefile.PL
 MANIFEST
 META.json

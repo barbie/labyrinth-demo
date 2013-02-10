@@ -6,6 +6,7 @@ Changes for the Labyrinth Demo Site
         - increased Labyrinth Core version dependency.
         - updated and added tinymce.
         - reworked Makefile.PL for clarity.
+        - added LICENSE and INSTALL files.
 
 1.00    2011-01-01
         - official release alongside Labyrinth Core.
