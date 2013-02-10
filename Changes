@@ -5,6 +5,7 @@ Changes for the Labyrinth Demo Site
         - change file dates changed to meet W3CDTF standards.
         - increased Labyrinth Core version dependency.
         - updated and added tinymce.
+        - reworked Makefile.PL for clarity.
 
 1.00    2011-01-01
         - official release alongside Labyrinth Core.

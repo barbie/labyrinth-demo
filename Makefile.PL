@@ -1,13 +1,25 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
 use 5.006;
+
 use ExtUtils::MakeMaker;
+
 WriteMakefile(
-    NAME            => 'Labyrinth::Demo',
-    VERSION_FROM    => 'lib/Labyrinth/Demo.pm',
-    PREREQ_PM       => {
+    AUTHOR              => 'Barbie <barbie@cpan.org>',
+    NAME                => 'Labyrinth::Demo',
+    VERSION_FROM        => 'lib/Labyrinth/Demo.pm',
+    ABSTRACT	        => 'Labyrinth Website Management Framework - Demo Website',
+    NO_META             => 1,
+    PREREQ_PM           => {
+
+        # prereqs
         'Labyrinth'                 => '5.14',
         'Labyrinth::Plugin::Core'   => '5.04',
+
+        # build/test prereqs
+        'IO::File'                  => 0,
+        'Test::More'                => '0.70',
     },
-    NO_META     => 1,
-    ABSTRACT    => 'Labyrinth Website Management Framework - Demo Website',
-    AUTHOR      => 'Barbie <barbie@cpan.org>',
 );
