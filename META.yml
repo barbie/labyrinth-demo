@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                       Labyrinth::Demo
-version:                    1.01
+version:                    1.02
 abstract:                   Labyrinth Website Management Framework - Demo Website
 author:
   - Barbie <barbie@cpan.org>
@@ -25,7 +25,7 @@ build_requires:
 provides:
   Labyrinth::Demo:
     file:     lib/Labyrinth/Demo.pm
-    version:  1.01
+    version:  1.02
 
 no_index:
   directory:

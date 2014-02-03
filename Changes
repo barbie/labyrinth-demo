@@ -1,6 +1,7 @@
 Changes for the Labyrinth Demo Site
 ===================================
 
+1.02    2014-02-02
         - removed IMAGE parse rule.
         - updated templates to XHTML standards.
         - upgrade to Labyrinth-5.20.
