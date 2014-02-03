@@ -76,7 +76,7 @@ __END__
 
 =head1 AUTHOR
 
-  Copyright (c) 2002-2011 Barbie <barbie@cpan.org> Miss Barbell Productions.
+  Copyright (c) 2002-2014 Barbie <barbie@cpan.org> Miss Barbell Productions.
 
 =head1 LICENSE
 
