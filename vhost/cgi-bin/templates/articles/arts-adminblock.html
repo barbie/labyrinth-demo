@@ -1,10 +1,10 @@
 <input type="hidden" name="sectionid" value="[% article.data.sectionid %]" />
 <input type="hidden" name="articleid" value="[% article.data.articleid %]" />
-<input type="hidden" name="folderid" value="[% article.data.folderid %]" />
-<input type="hidden" name="userid" value="[% article.data.userid %]" />
-<input type="hidden" name="imageid" value="[% article.data.imageid %]" />
-<input type="hidden" name='doaction' value='' />
-<input type="hidden" name="recordid" value='' />
+<input type="hidden" name="folderid"  value="[% article.data.folderid %]" />
+<input type="hidden" name="userid"    value="[% article.data.userid %]" />
+<input type="hidden" name="imageid"   value="[% article.data.imageid %]" />
+<input type="hidden" name='doaction'  value='' />
+<input type="hidden" name="recordid"  value='' />
 
 <div class="boxer">
     <table width="100%">
@@ -65,7 +65,7 @@
             </table>
             <p>Please note that when initially selecting images from the Photo Gallery, the loaded image wlll be the
             current raw size. Once the page is saved the image will be resized to the appropriate dimensions. In the
-            width and height boxes, you may leave these blank or set to 0 to use the default settings (max 400x400 pixels).
+            width and height boxes, you may leave these blank or set to 0 to use the default settings (max 400x400 pixels).</p>
         </td>
     </tr>
 [% END %]
@@ -96,6 +96,6 @@
 [% END %]
 
     </table>
-<p align="center">[ <a href="javascript:doSubmit('AddImage',0)">Add an image</a> | <a href="javascript:doSubmit('AddPara',0)">Add a text block</a> ]
-<p align="center"><input type="submit" value="Submit" />
+<p align="center">[ <a href="javascript:doSubmit('AddImage',0)">Add an image</a> | <a href="javascript:doSubmit('AddPara',0)">Add a text block</a> ]</p>
+<p align="center"><input type="submit" value="Submit" /></p>
 </div>

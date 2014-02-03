@@ -4,15 +4,15 @@
 
 <div class="boxer">
 
-<p>Click on an article's 'Quick Name' to edit or create additional content.
+<p>Click on an article's 'Quick Name' to edit or create additional content.</p>
 
     <form method="POST" name="SEARCH" id="SEARCH" action="[% cgipath %]/pages.cgi">
     <input type="hidden" name="act" value="arts-admin" />
     <p>Search by Title: <input type="text" name="searchname" />
-    [% ddpublish %] <input type="submit" value="GO" />
+    [% ddpublish %] <input type="submit" value="GO" /></p>
     <p>
       <a href="pages.cgi?act=arts-admin">view all</a>
-    | <a href="pages.cgi?act=arts-add">create a new article</a>
+    | <a href="pages.cgi?act=arts-add">create a new article</a></p>
     </form>
 </div>
 
@@ -52,5 +52,5 @@
 <input type="hidden" name='doaction' value='' />
 <input type="button" value='Promote' onClick="doSubmit('Promote',0)" />
 <input type="button" value='Copy'    onClick="doOnlyOne('Copy')" />
-<input type="button" value='Delete'  onClick="doSubmit('Delete',0)" />
+<input type="button" value='Delete'  onClick="doSubmit('Delete',0)" /></p>
 </form>
