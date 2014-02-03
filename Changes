@@ -3,8 +3,9 @@ Changes for the Labyrinth Demo Site
 
         - removed IMAGE parse rule.
         - updated templates to XHTML standards.
-        - upgrade to Labyrinth-5.20
-        - upgrade to Labyrinth-Plugin-Core-5.14
+        - upgrade to Labyrinth-5.20.
+        - upgrade to Labyrinth-Plugin-Core-5.14.
+        - removed obsolete templates & images.
 
 1.01    2013-02-10
         - updates to phrasebook.ini.

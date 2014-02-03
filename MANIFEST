@@ -37,9 +37,7 @@ vhost/cgi-bin/templates/articles/arts-block.html
 vhost/cgi-bin/templates/articles/arts-failure.html
 vhost/cgi-bin/templates/articles/arts-item.html
 vhost/cgi-bin/templates/articles/arts-preview.html
-vhost/cgi-bin/templates/content/about.html
 vhost/cgi-bin/templates/content/welcome.html
-vhost/cgi-bin/templates/hits/hits.html
 vhost/cgi-bin/templates/hits/hits_admin.html
 vhost/cgi-bin/templates/images/image-edit.html
 vhost/cgi-bin/templates/images/image-failure.html
@@ -61,7 +59,6 @@ vhost/cgi-bin/templates/public/footer.html
 vhost/cgi-bin/templates/public/layout.html
 vhost/cgi-bin/templates/public/licence.html
 vhost/cgi-bin/templates/public/navigation.html
-vhost/cgi-bin/templates/public/pagenav.html
 vhost/cgi-bin/templates/public/popup.html
 vhost/cgi-bin/templates/public/rssfeed.xml
 vhost/cgi-bin/templates/public/sidebar.html
@@ -73,7 +70,6 @@ vhost/cgi-bin/templates/users/user-acl.html
 vhost/cgi-bin/templates/users/user-adminedit.html
 vhost/cgi-bin/templates/users/user-adminlist.html
 vhost/cgi-bin/templates/users/user-adminpass.html
-vhost/cgi-bin/templates/users/user-announce.html
 vhost/cgi-bin/templates/users/user-badreset.html
 vhost/cgi-bin/templates/users/user-chng.html
 vhost/cgi-bin/templates/users/user-edit.html
@@ -88,8 +84,6 @@ vhost/cgi-bin/templates/users/user-registration.html
 vhost/html/css/PixelGreen.css
 vhost/html/favicon.ico
 vhost/html/favicon.png
-vhost/html/images/adverts/circle_power_perl.gif
-vhost/html/images/adverts/tt.gif
 vhost/html/images/blank.png
 vhost/html/images/draft/blank.png
 vhost/html/images/icons/somerights.gif
@@ -161,8 +155,8 @@ vhost/html/js/tiny_mce/plugins/example/editor_plugin.js
 vhost/html/js/tiny_mce/plugins/example/editor_plugin_src.js
 vhost/html/js/tiny_mce/plugins/example/img/example.gif
 vhost/html/js/tiny_mce/plugins/example/js/dialog.js
-vhost/html/js/tiny_mce/plugins/example/langs/en.js
 vhost/html/js/tiny_mce/plugins/example/langs/en_dlg.js
+vhost/html/js/tiny_mce/plugins/example/langs/en.js
 vhost/html/js/tiny_mce/plugins/fullpage/css/fullpage.css
 vhost/html/js/tiny_mce/plugins/fullpage/editor_plugin.js
 vhost/html/js/tiny_mce/plugins/fullpage/editor_plugin_src.js
@@ -308,8 +302,8 @@ vhost/html/js/tiny_mce/themes/advanced/js/color_picker.js
 vhost/html/js/tiny_mce/themes/advanced/js/image.js
 vhost/html/js/tiny_mce/themes/advanced/js/link.js
 vhost/html/js/tiny_mce/themes/advanced/js/source_editor.js
-vhost/html/js/tiny_mce/themes/advanced/langs/en.js
 vhost/html/js/tiny_mce/themes/advanced/langs/en_dlg.js
+vhost/html/js/tiny_mce/themes/advanced/langs/en.js
 vhost/html/js/tiny_mce/themes/advanced/link.htm
 vhost/html/js/tiny_mce/themes/advanced/skins/default/content.css
 vhost/html/js/tiny_mce/themes/advanced/skins/default/dialog.css
@@ -322,11 +316,11 @@ vhost/html/js/tiny_mce/themes/advanced/skins/default/img/tabs.gif
 vhost/html/js/tiny_mce/themes/advanced/skins/default/ui.css
 vhost/html/js/tiny_mce/themes/advanced/skins/o2k7/content.css
 vhost/html/js/tiny_mce/themes/advanced/skins/o2k7/dialog.css
-vhost/html/js/tiny_mce/themes/advanced/skins/o2k7/img/button_bg.png
 vhost/html/js/tiny_mce/themes/advanced/skins/o2k7/img/button_bg_black.png
+vhost/html/js/tiny_mce/themes/advanced/skins/o2k7/img/button_bg.png
 vhost/html/js/tiny_mce/themes/advanced/skins/o2k7/img/button_bg_silver.png
-vhost/html/js/tiny_mce/themes/advanced/skins/o2k7/ui.css
 vhost/html/js/tiny_mce/themes/advanced/skins/o2k7/ui_black.css
+vhost/html/js/tiny_mce/themes/advanced/skins/o2k7/ui.css
 vhost/html/js/tiny_mce/themes/advanced/skins/o2k7/ui_silver.css
 vhost/html/js/tiny_mce/themes/advanced/source_editor.htm
 vhost/html/js/tiny_mce/themes/simple/editor_template.js
@@ -347,6 +341,6 @@ vhost/html/js/tiny_mce/utils/mctabs.js
 vhost/html/js/tiny_mce/utils/validate.js
 vhost/html/robots.txt
 vhost/toolkit/rssfeeds.pl
-vhost/toolkit/sumhits-settings.ini
 vhost/toolkit/sumhits.pl
+vhost/toolkit/sumhits-settings.ini
 vhost/vhosts.conf
