@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.1.41, for debian-linux-gnu (i486)
+-- MySQL dump 10.13  Distrib 5.5.34, for debian-linux-gnu (i686)
 --
 -- Host: localhost    Database: demo
 -- ------------------------------------------------------
--- Server version	5.1.41-3ubuntu12.8
+-- Server version	5.5.34-0ubuntu0.12.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -103,7 +103,7 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` VALUES (1,1,'About Labyrinth',1,'1174863600',3,'about','',0,0,0,3);
-INSERT INTO `articles` VALUES (2,1,'Test',2,'1294012800',3,'test',NULL,0,0,0,1);
+INSERT INTO `articles` VALUES (2,1,'Terms &amp; Conditions',2,'1294012800',3,'terms',NULL,0,0,0,3);
 
 --
 -- Table structure for table `folders`
@@ -114,18 +114,19 @@ DROP TABLE IF EXISTS `folders`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `folders` (
   `folderid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `foldername` varchar(255) DEFAULT NULL,
-  `ref` varchar(255) DEFAULT NULL,
+  `path` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `parent` int(10) DEFAULT NULL,
-  PRIMARY KEY (`folderid`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `accessid` int(10) NOT NULL DEFAULT '5',
+  PRIMARY KEY (`folderid`),
+  KEY `IXPATH` (`path`)
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `folders`
 --
 
-INSERT INTO `folders` VALUES (1,'public','1',0);
+INSERT INTO `folders` VALUES (1,'public',0,1);
 
 --
 -- Table structure for table `groups`
@@ -412,7 +413,7 @@ CREATE TABLE `options` (
 --
 
 INSERT INTO `options` VALUES (1,1,1,1,NULL,'Home','/cgi-bin/pages.cgi?act=home-main',NULL);
-INSERT INTO `options` VALUES (2,1,2,1,NULL,'About','/cgi-bin/pages.cgi?act=arts-item&name=about',NULL);
+INSERT INTO `options` VALUES (2,1,2,1,NULL,'About','/cgi-bin/pages.cgi?act=arts-item&amp;name=about',NULL);
 INSERT INTO `options` VALUES (5,2,1,3,NULL,'Admin','/cgi-bin/pages.cgi?act=home-admin',NULL);
 INSERT INTO `options` VALUES (7,2,2,2,NULL,'Site Pages','/cgi-bin/pages.cgi?act=arts-admin',NULL);
 INSERT INTO `options` VALUES (9,2,3,4,NULL,'Menus','/cgi-bin/pages.cgi?act=menu-admin',NULL);
@@ -451,7 +452,7 @@ CREATE TABLE `paragraphs` (
 --
 
 INSERT INTO `paragraphs` VALUES (1,1,1,2,0,NULL,'<h2>A Brief History</h2>\r\n<p>In 2000 a website management tool, Mephisto, was written, and then  implemented as intranets for a number of Local Education Authorities in  the UK. Although well designed, developed and deployed, it focused very  specifically at the Education market in the UK, and very tightly  combined its feature set to the core application. However, it did  highlight how it could be implemented for alternative markets and  clients.</p>\r\n<p>In late 2002, the design of Labyrinth began, taking many of the good  ideas of Mephisto, enhancing where possible, and restructuring the  interfaces to better implement websites for any type of use. Taking away  the focus of the Education specific features, making them more generic  and most importantly ... pluggable ... allowed the core application to  be tailored to whatever the client wanted. Adding many new features or  &quot;plugins&quot; extended Labyrinth even further.</p>\r\n<p>After 8 years of closed source development, despite being used for  many successful Open Source websites, it was time to release the code  for others to use, improve and adapt. The code base developed prior to  version 5.00 remains closed source. However, from version 5.00 the  Labyrinth code is now available within a <em>git</em> code repository.</p>',NULL);
-INSERT INTO `paragraphs` VALUES (2,2,1,2,0,NULL,'<p>blah blah blah</p>',NULL);
+INSERT INTO `paragraphs` VALUES (2,2,1,2,0,NULL,'<h2>Cookie Policy</h2>\r\n<h3>EU Cookie Directive</h3>\r\n<p>In order to comply with <strong><a title=\"Article 2 of Directive 2009/136/EC\" href=\"http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2009:337:0011:0036:EN:PDF\">Article 2 of Directive 2009/136/EC</a></strong>, which amends the <strong><a title=\"E-Privacy Directive 2002/58/EC\" href=\"http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2002:108:0033:0050:EN:PDF\">E-Privacy Directive 2002/58/EC</a></strong>, within the <strong><a title=\"EU Electronic Communications Framework\" href=\"http://europa.eu/legislation_summaries/internal_market/single_market_services/l24216a_en.htm\">EU Electronic Communications Framework (ECF)</a></strong>, all businesses must now make you aware of the use of cookies on their site.</p>\r\n<h3>Our Cookie Usage</h3>\r\n<p>This website uses cookies to enable us to improve the site usage. Our  cookies fall into two categories; site usage and site analysis. Below  are a list of the specifc cookies we use and what they are used for.</p><p>No Third Party cookies are used or set by the Labyrinth Demo website.</p><p>Other useful links: <strong><a title=\"read more about cookies\" href=\"http://www.allaboutcookies.org\">http://www.allaboutcookies.org</a></strong>.</p>\r\n<table id=\"infotable\" border=\"0\" summary=\"The Cookies We Use\">\r\n\r\n<tr>\r\n<th>Cookie&nbsp;Name</th><th>Category</th><th>Purpose</th>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">sessionid</td>\r\n<td valign=\"top\">Usage</td>\r\n<td>A unique identifier given to each session.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">_utma,<br />_utmc,<br />_utmz</td>\r\n<td valign=\"top\">Analysis</td>\r\n<td>Google Analytics cookies. For more detailed information about how these cookies are used, please see the <a title=\"Google Analytics Cookie Guide\" href=\"http://code.google.com/apis/analytics/docs/concepts/gaConceptsCookies.html\">Google Analytics Cookie Guide</a>. Please note all Google Analytics cookies are considered <strong>First Party Cookies</strong> and are only used to process anonymous site usage for this domain.</td>\r\n</tr>\r\n\r\n</table>\r\n<h3>Google Analytics</h3>\r\n<p>This website uses Google Analytics, a web analytics service provided  by Google, Inc. (\"Google\"). Google Analytics uses \"cookies\", which are  text files placed on your computer, to help the website analyze how  users use the site. The information generated by the cookie about your  use of the website (including your IP address) will be transmitted to  and stored by Google on servers in the United States . Google will use  this information for the purpose of evaluating your use of the website,  compiling reports on website activity for website operators and  providing other services relating to website activity and internet  usage. Google may also transfer this information to third parties where  required to do so by law, or where such third parties process the  information on Google\'s behalf. Google will not associate your IP  address with any other data held by Google. You may refuse the use of  cookies by selecting the appropriate settings on your browser, however  please note that if you do this you may not be able to use the full  functionality of this website. By using this website, you consent to the  processing of data about you by Google in the manner and for the  purposes set out above.</p>\r\n<h2>Links</h2>\r\n<p>The inclusion of a link to an organisation\'s or individual\'s website  does not constitute an endorsement or an approval by Miss Barbell Productions of any  product, service, policy or opinion of the organisation or individual. Miss Barbell Productions  is not responsible for the content of external websites.</p>',NULL);
 
 --
 -- Table structure for table `realms`
@@ -501,10 +502,6 @@ CREATE TABLE `sessions` (
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `sessions`
---
-
 
 --
 -- Table structure for table `updates`
@@ -524,11 +521,6 @@ CREATE TABLE `updates` (
   INDEX PAGIX (`pageid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `updates`
---
-
 
 --
 -- Table structure for table `users`
@@ -574,4 +566,4 @@ INSERT INTO `users` VALUES (3,1,1,'','Test User','testuser@example.com','public'
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-01-04 14:23:31
+-- Dump completed on 2014-02-03 22:11:02
