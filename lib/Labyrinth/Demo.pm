@@ -3,11 +3,11 @@ package Labyrinth::Demo;
 use warnings;
 use strict;
 
-our $VERSION = '1.01';
+our $VERSION = '1.02';
 
 1;
 
-__END_2
+__END__
 
 =head1 NAME
 
