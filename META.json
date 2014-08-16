@@ -1,6 +1,6 @@
 {
     "name": "Labyrinth-Demo",
-    "version": "1.02",
+    "version": "1.03",
     "abstract": "Labyrinth Website Management Framework - Demo Website",
     "author": [
         "Barbie (BARBIE) <barbie@cpan.org>"
@@ -45,7 +45,7 @@
     "provides": {
         "Labyrinth::Demo": {
             "file": "lib/Labyrinth/Demo.pm",
-            "version": "1.02"
+            "version": "1.03"
         }
     },
     "no_index": {
