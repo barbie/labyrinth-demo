@@ -27,7 +27,7 @@ CREATE TABLE `access` (
   `accessname` varchar(255) DEFAULT NULL,
   `accesslevel` int(4) DEFAULT NULL,
   PRIMARY KEY (`accessid`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -58,7 +58,7 @@ CREATE TABLE `acls` (
   INDEX GRPIX (`groupid`),
   INDEX USRIX (`userid`),
   INDEX ACSIX (`accessid`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,7 +95,7 @@ CREATE TABLE `articles` (
   INDEX SECIX (`sectionid`),
   INDEX NAMIX (`quickname`),
   INDEX PUBIX (`publish`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -119,7 +119,7 @@ CREATE TABLE `folders` (
   `accessid` int(10) NOT NULL DEFAULT '5',
   PRIMARY KEY (`folderid`),
   KEY `IXPATH` (`path`)
-) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -141,7 +141,7 @@ CREATE TABLE `groups` (
   `master` int(2) DEFAULT '0',
   `member` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`groupid`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -172,7 +172,7 @@ CREATE TABLE `hits` (
   INDEX PAGIX (`pageid`),
   INDEX PHTIX (`photoid`),
   INDEX AREIX (`area`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -196,7 +196,7 @@ CREATE TABLE `images` (
   `dimensions` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`imageid`),
   INDEX TYPIX (`type`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -217,7 +217,7 @@ CREATE TABLE `imagestock` (
   `title` varchar(255) DEFAULT NULL,
   `path` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`stockid`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -242,7 +242,7 @@ CREATE TABLE `imetadata` (
   `imageid` int(10) unsigned NOT NULL DEFAULT '0',
   `tag` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`imageid`,`tag`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -262,7 +262,7 @@ CREATE TABLE `ipindex` (
   `author` varchar(255) NOT NULL DEFAULT '',
   `type` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ipaddr`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -281,7 +281,7 @@ CREATE TABLE `ixfolderrealm` (
   `folderid` int(10) unsigned NOT NULL DEFAULT '0',
   `realmid` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`folderid`,`realmid`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -307,7 +307,7 @@ CREATE TABLE `ixusergroup` (
   INDEX TYPIX (`type`),
   INDEX LNKIX (`linkid`),
   INDEX GRPIX (`groupid`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -334,7 +334,7 @@ CREATE TABLE `menus` (
   PRIMARY KEY (`menuid`),
   INDEX TYPIX (`typeid`),
   INDEX RLMIX (`realmid`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -356,7 +356,7 @@ CREATE TABLE `mxarticles` (
   `articleid` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `metadata` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`articleid`,`metadata`)
-) ENGINE=MyISAM AUTO_INCREMENT=187 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -378,7 +378,7 @@ CREATE TABLE `optimages` (
   `imageid` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`optionid`,`typeid`),
   INDEX IMGIX (`imageid`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -405,7 +405,7 @@ CREATE TABLE `options` (
   PRIMARY KEY (`optionid`),
   INDEX MENIX (`menuid`),
   INDEX ACSIX (`accessid`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -444,7 +444,7 @@ CREATE TABLE `paragraphs` (
   PRIMARY KEY (`paraid`),
   INDEX ARTIX (`articleid`),
   INDEX IMGIX (`imageid`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -468,7 +468,7 @@ CREATE TABLE `realms` (
   `command` varchar(32) DEFAULT NULL,
   PRIMARY KEY (`realmid`),
   INDEX RLMIX (`realm`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -499,7 +499,7 @@ CREATE TABLE `sessions` (
   PRIMARY KEY (`sessionid`),
   INDEX LABIX (`labyrinth`),
   INDEX USRIX (`userid`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
@@ -519,7 +519,7 @@ CREATE TABLE `updates` (
   PRIMARY KEY (`upid`),
   INDEX AREIX (`area`),
   INDEX PAGIX (`pageid`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -545,7 +545,7 @@ CREATE TABLE `users` (
   INDEX ACSIX (`accessid`),
   INDEX IMGIX (`imageid`),
   INDEX RLMIX (`realm`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
