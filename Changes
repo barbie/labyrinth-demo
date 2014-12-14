@@ -6,6 +6,7 @@ Changes for the Labyrinth Demo Site
         - upgrade to Labyrinth-5.29.
         - upgrade to Labyrinth-Plugin-Core-5.18.
         - database table charset changed to UTF8.
+        - phasebook updates.
 
 1.03    2014-08-16
         - fixed distribution name in metadata.
