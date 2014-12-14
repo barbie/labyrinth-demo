@@ -183,7 +183,7 @@ Miss Barbell Productions, L<http://www.missbarbell.co.uk/>
   Copyright (C) 2002-2014 Barbie for Miss Barbell Productions
   All Rights Reserved.
 
-  This module is free software; you can redistribute it and/or
+  This distribution is free software; you can redistribute it and/or
   modify it under the Artistic License 2.0.
 
 =cut
