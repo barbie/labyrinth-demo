@@ -1,6 +1,7 @@
 Changes for the Labyrinth Demo Site
 ===================================
 
+1.04    2014-12-16
         - fixed license fields in META.json to be lists.
         - extended META test suite.
         - upgrade to Labyrinth-5.29.
